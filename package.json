@@ -1,0 +1,20 @@
+{
+  "name": "hyenahornet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./app/src/index.js",
+  "scripts": {
+    "build-css": "sass ./app/src/index.scss ./app/src/index.css",
+    "run": "node ./app/src/index.js --trace-warnings"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "express": "^4.19.2",
+    "sass": "^1.77.8",
+    "sqlite3": "^5.1.7"
+  },
+  "type": "commonjs"
+}
