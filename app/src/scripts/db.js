@@ -1,7 +1,7 @@
 const { Database } = require('sqlite3');
 const path = require('path');
 
-const db = new Database(path.resolve(__dirname, '../db/app.db'), (err) => {
+const db = new Database(path.resolve(__dirname, '../../db/app.db'), (err) => {
     if (err) {
         return console.error(err.message);
     }
