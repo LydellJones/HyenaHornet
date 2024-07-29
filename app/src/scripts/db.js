@@ -25,11 +25,30 @@ function gracefulShutdown() {
 
 function databaseSetup()
 {
-    console.log("[DB] Initializing...")
-    db.exec(`CREATE TABLE IF NOT EXISTS tasklist`)
+    console.log("[DB] Initializing...");
+    console.log("[DB] Loading Tasklist...");
+    db.exec(`CREATE TABLE IF NOT EXISTS tasklist (
+        task_title TEXT,
+        task_desc TEXT,
+        task_author TEXT,
+        task_date_created NUMERIC
+    );`);
+    console.log("[DB] Loading Classes...");
+    db.exec(`CREATE TABLE IF NOT EXISTS classes (
+        class_id TEXT PRIMARY KEY,
+        class_name TEXT
+    );`);
+    console.log("[DB] Loading Homework...");
+    db.exec(`CREATE TABLE IF NOT EXISTS assignments (
+        asgmt_id TEXT PRIMARY KEY,
+        asgmt_name TEXT,
+        asgmt_desc TEXT,
+        asgmt_date_created NUMERIC
+    );`);
 }
 
 module.exports.db = db;
 module.exports.gracefulShutdown = gracefulShutdown;
+module.exports.databaseSetup = databaseSetup;
 
 
