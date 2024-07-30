@@ -40,7 +40,6 @@ function databaseSetup()
     );`);
     console.log("[DB] Loading Homework...");
     db.exec(`CREATE TABLE IF NOT EXISTS assignments (
-        asgmt_id TEXT PRIMARY KEY,
         asgmt_name TEXT,
         asgmt_desc TEXT,
         asgmt_date_created NUMERIC
