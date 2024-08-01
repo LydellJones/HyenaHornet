@@ -9,7 +9,7 @@ const db = new Database(path.resolve(__dirname, '../../db/app.db'), (err) => {
     console.log("[DB] Database connected");
 });
 
-function gracefulShutdown() {
+function gShutdown() {
     console.log('[DB] Need to shutdown database, please be patient...');
 
     // Close the database connection
@@ -47,7 +47,7 @@ function databaseSetup()
 }
 
 module.exports.db = db;
-module.exports.gracefulShutdown = gracefulShutdown;
+module.exports.gShutdown = gShutdown;
 module.exports.databaseSetup = databaseSetup;
 
 
